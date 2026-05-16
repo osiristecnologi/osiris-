@@ -3,561 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSIRIS - Domine a Programação e IA</title>
+    <title>Aula 1 - Introdução à Programação | OSIRIS</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Background Effects -->
-    <div class="bg-grid"></div>
-    <div class="bg-glow"></div>
-    <div class="particles" id="particles"></div>
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+        <div class="neon-glow"></div>
+    </div>
 
-    <!-- Navigation -->
+    <!-- Navegação -->
     <nav class="navbar glass-effect">
         <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-eye"></i>
-                </div>
-                <span class="logo-text">OSIRIS</span>
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-eye"></i>
+                <span>OSIRIS</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link active">Início</a></li>
-                <li><a href="#trilha" class="nav-link">Trilha</a></li>
-                <li><a href="#tecnologias" class="nav-link">Tecnologias</a></li>
-                <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                <li><a href="#comunidade" class="nav-link">Comunidade</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aula1.html" class="active">Aula 1</a></li>
+                <li><a href="aula2.html">Aula 2</a></li>
+                <li><a href="aula3.html">Aula 3</a></li>
+                <li><a href="aula4.html">Aula 4</a></li>
+                <li><a href="aula5.html">Aula 5</a></li>
+                <li><a href="aula6.html">Aula 6</a></li>
+                <li><a href="aula7.html">Aula 7</a></li>
+                <li><a href="aula8.html">Aula 8</a></li>
+                <li><a href="aula9.html">Aula 9</a></li>
+                <li><a href="aula10.html">Aula 10</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="btn-login">Entrar</button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>DO BÁSICO AO AVANÇADO</span>
+    <!-- Conteúdo da Aula -->
+    <main class="aula-container">
+        <div class="aula-header">
+            <div class="aula-badge">AULA 1 DE 10</div>
+            <h1><i class="fas fa-rocket"></i> Introdução à Programação Web</h1>
+            <p class="aula-subtitle">Entenda como a web funciona e prepare seu ambiente</p>
+        </div>
+
+        <div class="aula-content">
+            <!-- Seção 1 -->
+            <section class="aula-section">
+                <h2><i class="fas fa-book-open"></i> O que é Programação?</h2>
+                <div class="content-block">
+                    <p><strong>Programar</strong> é dar instruções para um computador executar tarefas específicas. É como escrever uma receita de bolo, mas para máquinas!</p>
+                    
+                    <div class="info-box">
+                        <h3><i class="fas fa-lightbulb"></i> Analogia Simples:</h3>
+                        <ul>
+                            <li><strong>Você:</strong> "Pegue o copo d'água"</li>
+                            <li><strong>Computador:</strong> Precisa de instruções detalhadas:
+                                <ol>
+                                    <li>Localizar o copo</li>
+                                    <li>Mover a mão até o copo</li>
+                                    <li>Agarrar o copo</li>
+                                    <li>Levantar o copo</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <h1 class="hero-title">
-                    DOMINE A PROGRAMAÇÃO<br>
-                    <span class="gradient-text">E A INTELIGÊNCIA ARTIFICIAL</span>
-                </h1>
-                <p class="hero-description">
-                    Uma jornada completa em 10 partes para transformar você de iniciante a especialista em programação e IA.
-                </p>
+            </section>
+
+            <!-- Seção 2 -->
+            <section class="aula-section">
+                <h2><i class="fas fa-globe"></i> Como Funciona a Web?</h2>
+                <div class="content-block">
+                    <p>A web é baseada em <strong>três tecnologias principais</strong>:</p>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-html5" style="color: #E34F26;"></i>
+                            <h3>HTML</h3>
+                            <p><strong>Estrutura</strong> - É o esqueleto da página. Define o conteúdo (títulos, parágrafos, imagens).</p>
+                            <div class="code-example">
+                                <code>&lt;h1&gt;Olá Mundo&lt;/h1&gt;</code>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <i class="fab fa-css3-alt" style="color: #264DE4;"></i>
+                            <h3>CSS</h3>
+                            <p><strong>Estilo</strong> - É a "roupa" da página. Define cores, fontes, layout.</p>
+                            <div class="code-example">
+                                <code>h1 { color: blue; }</code>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                            <h3>JavaScript</h3>
+                            <p><strong>Comportamento</strong> - É o "cérebro". Torna a página interativa.</p>
+                            <div class="code-example">
+                                <code>alert('Olá!');</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 3 -->
+            <section class="aula-section">
+                <h2><i class="fas fa-tools"></i> Configurando seu Ambiente</h2>
+                <div class="content-block">
+                    <p>Você precisa de apenas <strong>2 coisas</strong> para começar:</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Editor de Código</h3>
+                                <p>Recomendamos o <strong>VS Code</strong> (Visual Studio Code):</p>
+                                <ul>
+                                    <li>Baixe em: <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a></li>
+                                    <li>É gratuito e leve</li>
+                                    <li>Funciona em Windows, Mac e Linux</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Navegador Web</h3>
+                                <p>Use o <strong>Google Chrome</strong> ou <strong>Firefox</strong>:</p>
+                                <ul>
+                                    <li>Abra o arquivo HTML neles</li>
+                                    <li>Use o Inspecionar (F12) para ver o código</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 4 -->
+            <section class="aula-section">
+                <h2><i class="fas fa-code"></i> Seu Primeiro Código</h2>
+                <div class="content-block">
+                    <p>Vamos criar sua primeira página HTML!</p>
+                    
+                    <div class="tutorial-box">
+                        <h3>Passo a Passo:</h3>
+                        <ol>
+                            <li>Abra o VS Code</li>
+                            <li>Crie um novo arquivo (Ctrl+N)</li>
+                            <li>Digite o código abaixo:</li>
+                        </ol>
+                        
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>meu-primeiro-site.html</span>
+                                <button class="copy-btn" onclick="copyCode(this)">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                            </div>
+                            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Esta é minha primeira página web!&lt;/p&gt;
+    &lt;p&gt;Estou aprendendo programação no OSIRIS! 👁️&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        
+                        <ol start="4">
+                            <li>Salve o arquivo como <code>meu-primeiro-site.html</code></li>
+                            <li>Abra o arquivo no navegador (duplo clique)</li>
+                            <li>Pronto! Você verá sua página!</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 5 -->
+            <section class="aula-section">
+                <h2><i class="fas fa-tasks"></i> Exercício Prático</h2>
+                <div class="content-block">
+                    <div class="exercise-box">
+                        <h3><i class="fas fa-dumbbell"></i> Desafio da Aula 1:</h3>
+                        <p>Crie uma página sobre VOCÊ com:</p>
+                        <ul>
+                            <li>✓ Um título com seu nome (<code>&lt;h1&gt;</code>)</li>
+                            <li>✓ Um subtítulo com sua idade (<code>&lt;h2&gt;</code>)</li>
+                            <li>✓ Um parágrafo falando sobre você (<code>&lt;p&gt;</code>)</li>
+                            <li>✓ Uma lista de seus hobbies (<code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code>)</li>
+                        </ul>
+                        
+                        <div class="hint-box">
+                            <h4><i class="fas fa-lightbulb"></i> Dica:</h4>
+                            <pre><code>&lt;ul&gt;
+  &lt;li&gt;Jogar videogame&lt;/li&gt;
+  &lt;li&gt;Ler livros&lt;/li&gt;
+  &lt;li&gt;Programar&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 6 -->
+            <section class="aula-section">
+                <h2><i class="fas fa-check-circle"></i> Resumo da Aula</h2>
+                <div class="content-block">
+                    <div class="resumo-box">
+                        <ul class="resumo-list">
+                            <li><i class="fas fa-check"></i> Programação = Dar instruções ao computador</li>
+                            <li><i class="fas fa-check"></i> HTML = Estrutura | CSS = Estilo | JS = Comportamento</li>
+                            <li><i class="fas fa-check"></i> VS Code é o editor recomendado</li>
+                            <li><i class="fas fa-check"></i> HTML usa tags entre <code>&lt; &gt;</code></li>
+                            <li><i class="fas fa-check"></i> Todo arquivo HTML precisa de <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navegação entre aulas -->
+            <div class="aula-nav">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Voltar ao Início
+                </a>
+                <a href="aula2.html" class="btn btn-primary">
+                    Próxima Aula: HTML Básico <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Função para copiar código
+        function copyCode(btn) {
+            const code = btn.nextElementSibling.querySelector('code');
+            const text = code.innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+                btn.style.background = '#00C853';
                 
-                <div class="tech-tags">
-                    <div class="tech-tag html">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML</span>
-                    </div>
-                    <div class="tech-tag css">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="tech-tag js">
-                        <i class="fab fa-js"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="tech-tag python">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="tech-tag ai">
-                        <i class="fas fa-brain"></i>
-                        <span>Inteligência Artificial</span>
-                    </div>
-                </div>
-
-                <div class="hero-buttons">
-                    <button class="btn-primary" id="btnEntrar" onclick="fazerLogin()">
-                <i class="fas fa-sign-in-alt"></i> Entrar
-                </button>
-                        <span>COMEÇAR AGORA</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn-secondary">
-                        <span>VER TRILHA</span>
-                        <i class="fas fa-book-open"></i>
-                    </button>
-                </div>
-
-                <div class="hero-stats">
-                    <div class="stat">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <strong>10K+</strong>
-                            <span>Alunos</span>
-                        </div>
-                    </div>
-                    <div class="stat">
-                        <i class="fas fa-project-diagram"></i>
-                        <div>
-                            <strong>50+</strong>
-                            <span>Projetos</span>
-                        </div>
-                    </div>
-                    <div class="stat">
-                        <i class="fas fa-certificate"></i>
-                        <div>
-                            <strong>100%</strong>
-                            <span>Certificado</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="osiris-figure">
-                    <div class="figure-glow"></div>
-                    <div class="figure-container">
-                        <div class="egyptian-crown">
-                            <div class="crown-center"></div>
-                            <div class="crown-left"></div>
-                            <div class="crown-right"></div>
-                        </div>
-                        <div class="egyptian-face">
-                            <div class="face-glow"></div>
-                            <div class="eye left-eye">
-                                <div class="eye-glow"></div>
-                            </div>
-                            <div class="eye right-eye">
-                                <div class="eye-glow"></div>
-                            </div>
-                            <div class="mouth"></div>
-                        </div>
-                        <div class="energy-orb">
-                            <div class="orb-core"></div>
-                            <div class="orb-ring ring-1"></div>
-                            <div class="orb-ring ring-2"></div>
-                            <div class="orb-ring ring-3"></div>
-                            <div class="eye-symbol">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                        <div class="hands">
-                            <div class="hand left"></div>
-                            <div class="hand right"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="floating-cards">
-                    <div class="float-card html-card">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML</span>
-                    </div>
-                    <div class="float-card js-card">
-                        <i class="fab fa-js"></i>
-                        <span>JS</span>
-                    </div>
-                    <div class="float-card python-card">
-                        <i class="fab fa-python"></i>
-                        <span>PYTHON</span>
-                    </div>
-                    <div class="float-card ai-card">
-                        <i class="fas fa-brain"></i>
-                        <span>IA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>ROLE PARA EXPLORAR</span>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card glass-effect">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Aprendizado Progressivo</h3>
-                    <p>Do básico ao avançado em uma jornada estruturada e cuidadosamente planejada.</p>
-                </div>
-                <div class="feature-card glass-effect">
-                    <div class="feature-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Prática Real</h3>
-                    <p>Exercícios, projetos e desafios do mundo real para consolidar seu conhecimento.</p>
-                </div>
-                <div class="feature-card glass-effect">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>IA Integrada</h3>
-                    <p>Aprenda a criar soluções inteligentes com IA desde o início da sua jornada.</p>
-                </div>
-                <div class="feature-card glass-effect">
-                    <div class="feature-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Certificado</h3>
-                    <p>Conquiste seu certificado e impulsione sua carreira no mercado de tecnologia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Learning Path Section -->
-    <section id="trilha" class="learning-path">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-subtitle">TRILHA DE APRENDIZADO</span>
-                    <span class="title-main">10 PARTES</span>
-                </h2>
-                <p class="section-description">
-                    Uma jornada completa do zero ao especialista em programação e inteligência artificial
-                </p>
-            </div>
-
-            <div class="path-timeline">
-                <div class="path-node active" data-part="1">
-                    <div class="node-number">1</div>
-                    <div class="node-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Início</h3>
-                        <p>Comece sua jornada aqui</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="2">
-                    <div class="node-number">2</div>
-                    <div class="node-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>HTML</h3>
-                        <p>Estrutura da Web</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="3">
-                    <div class="node-number">3</div>
-                    <div class="node-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>JavaScript</h3>
-                        <p>Interatividade e Lógica</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="4">
-                    <div class="node-number">4</div>
-                    <div class="node-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Python</h3>
-                        <p>Lógica de Programação</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="5">
-                    <div class="node-number">5</div>
-                    <div class="node-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Estruturas de Dados</h3>
-                        <p>Organize e otimize informações</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="6">
-                    <div class="node-number">6</div>
-                    <div class="node-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Algoritmos</h3>
-                        <p>Resolução de problemas</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="7">
-                    <div class="node-number">7</div>
-                    <div class="node-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Desenvolvimento Web</h3>
-                        <p>Front-end e Back-end</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="8">
-                    <div class="node-number">8</div>
-                    <div class="node-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Inteligência Artificial</h3>
-                        <p>Conceitos e Fundamentos</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="9">
-                    <div class="node-number">9</div>
-                    <div class="node-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Machine Learning</h3>
-                        <p>Modelos e Treinamentos</p>
-                    </div>
-                    <div class="node-connector"></div>
-                </div>
-
-                <div class="path-node" data-part="10">
-                    <div class="node-number">10</div>
-                    <div class="node-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="node-content">
-                        <h3>Projetos Avançados</h3>
-                        <p>Aplicações reais e escaláveis</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section id="tecnologias" class="technologies">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-subtitle">TECNOLOGIAS</span>
-                    <span class="title-main">QUE VOCÊ VAI DOMINAR</span>
-                </h2>
-            </div>
-
-            <div class="tech-grid">
-                <div class="tech-card glass-effect">
-                    <div class="tech-icon html">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML5</h3>
-                    <p>Estruturação semântica e moderna para web</p>
-                    <ul class="tech-skills">
-                        <li><i class="fas fa-check"></i> Tags Semânticas</li>
-                        <li><i class="fas fa-check"></i> Acessibilidade</li>
-                        <li><i class="fas fa-check"></i> SEO</li>
-                    </ul>
-                </div>
-
-                <div class="tech-card glass-effect">
-                    <div class="tech-icon css">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <h3>CSS3</h3>
-                    <p>Estilização avançada e responsiva</p>
-                    <ul class="tech-skills">
-                        <li><i class="fas fa-check"></i> Flexbox & Grid</li>
-                        <li><i class="fas fa-check"></i> Animações</li>
-                        <li><i class="fas fa-check"></i> Design Responsivo</li>
-                    </ul>
-                </div>
-
-                <div class="tech-card glass-effect">
-                    <div class="tech-icon js">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <p>Programação dinâmica e interativa</p>
-                    <ul class="tech-skills">
-                        <li><i class="fas fa-check"></i> ES6+</li>
-                        <li><i class="fas fa-check"></i> Async/Await</li>
-                        <li><i class="fas fa-check"></i> DOM Manipulation</li>
-                    </ul>
-                </div>
-
-                <div class="tech-card glass-effect">
-                    <div class="tech-icon python">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                    <p>Linguagem versátil para IA e dados</p>
-                    <ul class="tech-skills">
-                        <li><i class="fas fa-check"></i> Sintaxe Simples</li>
-                        <li><i class="fas fa-check"></i> Bibliotecas Poderosas</li>
-                        <li><i class="fas fa-check"></i> Data Science</li>
-                    </ul>
-                </div>
-
-                <div class="tech-card glass-effect featured">
-                    <div class="tech-badge">DESTAQUE</div>
-                    <div class="tech-icon ai">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Inteligência Artificial</h3>
-                    <p>Machine Learning e Deep Learning</p>
-                    <ul class="tech-skills">
-                        <li><i class="fas fa-check"></i> Redes Neurais</li>
-                        <li><i class="fas fa-check"></i> NLP</li>
-                        <li><i class="fas fa-check"></i> Computer Vision</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content glass-effect">
-                <div class="cta-glow"></div>
-                <h2>PRONTO PARA COMEÇAR SUA JORNADA?</h2>
-                <p>Junte-se a milhares de alunos e transforme sua carreira na área de tecnologia</p>
-                <div class="cta-buttons">
-                    <button class="btn-primary btn-large">
-                        <span>INICIAR AGORA</span>
-                        <i class="fas fa-rocket"></i>
-                    </button>
-                    <button class="btn-outline btn-large">
-                        <span>SAIBA MAIS</span>
-                        <i class="fas fa-info-circle"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <span class="logo-text">OSIRIS</span>
-                    </div>
-                    <p>Transformando vidas através da educação em programação e inteligência artificial.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Plataforma</h4>
-                        <ul>
-                            <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Trilha</a></li>
-                            <li><a href="#">Projetos</a></li>
-                            <li><a href="#">Certificados</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Comunidade</h4>
-                        <ul>
-                            <li><a href="#">Discord</a></li>
-                            <li><a href="#">Fórum</a></li>
-                            <li><a href="#">Eventos</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Suporte</h4>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Privacidade</a></li>
-                            <li><a href="#">Termos</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 OSIRIS. Todos os direitos reservados.</p>
-                <p class="footer-tagline">DESPERTE SEU POTENCIAL. CONSTRUA O FUTURO.</p>
-            </div>
-        </div>
-    </footer>
-1<!-- Login Modal -->
-<div id="loginModal" class="modal">
-    <div class="modal-content glass-effect">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <i class="fas fa-user-astronaut"></i>
-            <h2>Bem-vindo ao OSIRIS</h2>
-            <p>Acesse sua jornada de aprendizado</p>
-        </div>
-        <form id="loginForm" class="modal-form">
-            <div class="form-group">
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                <input type="email" id="email" placeholder="seu@email.com" required>
-            </div>
-            <div class="form-group">
-                <label for="senha"><i class="fas fa-lock"></i> Senha</label>
-                <input type="password" id="senha" placeholder="••••••••" required>
-            </div>
-            <div class="form-options">
-                <label class="remember">
-                    <input type="checkbox"> Lembrar de mim
-                </label>
-                <a href="#" class="forgot-link">Esqueceu a senha?</a>
-            </div>
-            <button type="submit" class="btn-primary btn-block">
-                <i class="fas fa-sign-in-alt"></i> ENTRAR
-            </button>
-        </form>
-        <div class="modal-footer">
-            <p>Não tem conta? <a href="#" id="btnCriarConta">Criar conta gratuita</a></p>
-            <div class="social-login">
-                <p>Ou continue com:</p>
-                <div class="social-buttons">
-                    <button class="social-btn google"><i class="fab fa-google"></i></button>
-                    <button class="social-btn github"><i class="fab fa-github"></i></button>
-                    <button class="social-btn discord"><i class="fab fa-discord"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <script src="script.js"></script>
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
-</html>
+    </html>
