@@ -383,3 +383,128 @@ class TypingEffect {
 // Initialize typing effect if needed
 // const heroTitle = document.querySelector('.hero-text h1');
 // new TypingEffect(heroTitle, ['DOMINE A PROGRAMAÇÃO', 'E A INTELIGÊNCIA ARTIFICIAL']);
+// ============================================
+// FUNCIONALIDADE DO BOTÃO ENTRAR / MODAL LOGIN
+// ============================================
+
+const btnEntrar = document.getElementById('btnEntrar');
+const loginModal = document.getElementById('loginModal');
+const modalClose = document.querySelector('.modal-close');
+const loginForm = document.getElementById('loginForm');
+const btnCriarConta = document.getElementById('btnCriarConta');
+
+// Abrir modal ao clicar em "Entrar"
+if (btnEntrar) {
+    btnEntrar.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Evita scroll no background
+    });
+}
+
+// Fechar modal ao clicar no X
+if (modalClose) {
+    modalClose.addEventListener('click', () => {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+}
+
+// Fechar modal ao clicar fora do conteúdo
+if (loginModal) {
+    loginModal.addEventListener('click', (e) => {
+        if (e.target === loginModal) {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Fechar modal com tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && loginModal?.classList.contains('active')) {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Submit do formulário de login
+if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+        
+        // Simulação de login (em produção, conecte com backend)
+        const btn = loginForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Entrando...';
+        btn.disabled = true;
+        
+        // Simular delay de autenticação
+        setTimeout(() => {
+            // Aqui você integraria com sua API real
+            console.log('Login attempt:', { email, senha: '***' });
+            
+            // Feedback visual de sucesso
+            btn.innerHTML = '<i class="fas fa-check"></i> Sucesso!';
+            btn.style.background = 'linear-gradient(135deg, #00C853 0%, #00E676 100%)';
+            
+            setTimeout(() => {
+                // Redirecionar ou atualizar UI
+                alert(`🎉 Bem-vindo ao OSIRIS, ${email.split('@')[0]}!\n\nEm produção, você seria redirecionado para seu dashboard.`);
+                
+                // Resetar botão e fechar modal
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.style.background = '';
+                loginModal.classList.remove('active');
+                document.body.style.overflow = '';
+                loginForm.reset();
+            }, 1000);
+        }, 1500);
+    });
+}
+
+// Botão "Criar conta"
+if (btnCriarConta) {
+    btnCriarConta.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('🚀 Em breve: Sistema de registro completo!\n\nPor enquanto, use qualquer email para testar o login.');
+    });
+}
+
+// Botões de login social
+document.querySelectorAll('.social-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const provider = this.classList[1];
+        alert(`🔐 Login com ${provider.charAt(0).toUpperCase() + provider.slice(1)}\n\nEm produção, isso abriria a autenticação OAuth do ${provider}.`);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
