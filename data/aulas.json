@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "titulo": "Introdução à Programação Web",
+    "subtitulo": "Entenda como a web funciona e prepare seu ambiente",
+    "icone": "fa-rocket",
+    "secoes": [
+      {
+        "titulo": "O que é Programação?",
+        "conteudo": "Programar é dar instruções detalhadas para um computador. Pense como uma receita de bolo: cada passo deve ser claro e na ordem certa."
+      },
+      {
+        "titulo": "A Tríade da Web",
+        "conteudo": "Toda página moderna usa 3 tecnologias:\n• HTML: Estrutura (esqueleto)\n• CSS: Estilo (roupa/maquiagem)\n• JavaScript: Comportamento (cérebro/músculos)"
+      }
+    ],
+    "exercicio": "Instale o VS Code e o Google Chrome. Crie um arquivo index.html e digite <h1>Olá OSIRIS</h1>. Abra no navegador.",
+    "resumo": ["Programação = instruções para máquinas", "Web = HTML + CSS + JS", "VS Code é o editor padrão da indústria"]
+  },
+  {
+    "id": 2,
+    "titulo": "HTML Básico: Tags Essenciais",
+    "subtitulo": "Construa a estrutura de qualquer página",
+    "icone": "fa-html5",
+    "secoes": [
+      {
+        "titulo": "Estrutura Padrão",
+        "codigo": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Minha Página</title>\n</head>\n<body>\n  <h1>Título</h1>\n  <p>Parágrafo.</p>\n</body>\n</html>"
+      },
+      {
+        "titulo": "Tags Mais Usadas",
+        "conteudo": "• <h1> a <h6>: Títulos hierárquicos\n• <p>: Parágrafos\n• <a href=\"\">: Links\n• <img src=\"\" alt=\"\">: Imagens\n• <ul>/<ol>/<li>: Listas\n• <table>/<tr>/<td>: Tabelas"
+      }
+    ],
+    "exercicio": "Crie uma página de currículo com nome, foto, lista de habilidades e uma tabela de experiências.",
+    "resumo": ["HTML usa tags entre < >", "Sempre feche as tags", "alt é obrigatório em imagens para acessibilidade"]
+  },
+  {
+    "id": 3,
+    "titulo": "HTML Semântico",
+    "subtitulo": "Organize seu código como um profissional",
+    "icone": "fa-sitemap",
+    "secoes": [
+      {
+        "titulo": "Por que Semântica?",
+        "conteudo": "Tags semânticas dizem ao navegador e ao Google O QUE cada parte é. Isso melhora SEO e acessibilidade."
+      },
+      {
+        "titulo": "Tags Principais",
+        "conteudo": "• <header>: Cabeçalho/Logo/Menu\n• <nav>: Links de navegação\n• <main>: Conteúdo principal (único por página)\n• <section>: Seções temáticas\n• <article>: Conteúdo independente (posts)\n• <aside>: Barra lateral\n• <footer>: Rodapé"
+      }
+    ],
+    "exercicio": "Refaça seu currículo usando apenas tags semânticas. Remova todas as <div> genéricas.",
+    "resumo": ["Use <main> uma vez por página", "<nav> é para menus", "Semântica ≠ Estilo, é significado"]
+  },
+  {
+    "id": 4,
+    "titulo": "CSS Básico: Seletores e Cores",
+    "subtitulo": "Dê vida e identidade visual ao site",
+    "icone": "fa-palette",
+    "secoes": [
+      {
+        "titulo": "Como Conectar",
+        "codigo": "<head>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>"
+      },
+      {
+        "titulo": "Seletores",
+        "conteudo": "• Tag: p { color: white; } (todos os parágrafos)\n• Classe: .destaque { color: gold; } (reutilizável)\n• ID: #topo { font-size: 2rem; } (único)"
+      },
+      {
+        "titulo": "Cores e Fundo",
+        "conteudo": "• Nome: red, blue, black\n• HEX: #FF0000, #00BFFF\n• RGB: rgb(255, 0, 0)\n• RGBA: rgba(0,0,0,0.5) (com transparência)"
+      }
+    ],
+    "exercicio": "Crie um style.css. Deixe o fundo #0a0a0a, textos #ffffff e títulos #00BFFF. Crie uma classe .neon que adicione sombra azul.",
+    "resumo": ["Classes são reutilizáveis", "IDs são únicos", "Sempre conecte o CSS no <head>"]
+  },
+  {
+    "id": 5,
+    "titulo": "CSS Avançado: Flexbox e Grid",
+    "subtitulo": "Layouts modernos e responsivos",
+    "icone": "fa-layer-group",
+    "secoes": [
+      {
+        "titulo": "Flexbox (1 Dimensão)",
+        "conteudo": "Perfeito para alinhar itens em linha ou coluna.\n.container {\n  display: flex;\n  justify-content: center; /* eixo principal */\n  align-items: center; /* eixo cruzado */\n  gap: 20px;\n}"
+      },
+      {
+        "titulo": "CSS Grid (2 Dimensões)",
+        "conteudo": "Perfeito para layouts complexos.\n.grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 1rem;\n}"
+      }
+    ],
+    "exercicio": "Crie uma galeria de 6 cards usando Grid. Faça eles se reorganizarem automaticamente em telas menores.",
+    "resumo": ["Flex = linha/coluna", "Grid = linhas E colunas", "Use gap em vez de margins"]
+  },
+  {
+    "id": 6,
+    "titulo": "JavaScript: Fundamentos",
+    "subtitulo": "Lógica de programação e manipulação",
+    "icone": "fa-js",
+    "secoes": [
+      {
+        "titulo": "Variáveis e Tipos",
+        "codigo": "let nome = \"OSIRIS\";\nconst ano = 2026;\nlet ativo = true;\nlet notas = [10, 9, 8];\nlet user = { nome: \"Ana\", idade: 25 };"
+      },
+      {
+        "titulo": "Funções e Condicionais",
+        "codigo": "function saudacao(nome) {\n  return `Olá, ${nome}!`;\n}\n\nif (ano >= 2026) {\n  console.log(\"Futuro!\");\n} else {\n  console.log(\"Passado.\");\n}"
+      },
+      {
+        "titulo": "Loops",
+        "conteudo": "• for: repetição com contador\n• while: repete enquanto condição for true\n• forEach/ map: para arrays"
+      }
+    ],
+    "exercicio": "Crie um script que peça o nome e idade do usuário. Se idade >= 18, mostre 'Acesso permitido'. Senão, 'Acesso negado'.",
+    "resumo": ["let/const para variáveis", "Backticks `` para interpolação", "Sempre teste com console.log()"]
+  },
+  {
+    "id": 7,
+    "titulo": "JavaScript DOM",
+    "subtitulo": "Interaja com a página em tempo real",
+    "icone": "fa-mouse-pointer",
+    "secoes": [
+      {
+        "titulo": "Selecionar Elementos",
+        "codigo": "const btn = document.querySelector('#btn');\nconst items = document.querySelectorAll('.card');"
+      },
+      {
+        "titulo": "Eventos",
+        "codigo": "btn.addEventListener('click', () => {\n  alert('Clicou!');\n});\n\nform.addEventListener('submit', (e) => {\n  e.preventDefault(); // evita recarregar\n});"
+      },
+      {
+        "titulo": "Manipular HTML/CSS",
+        "conteudo": "• element.textContent = \"novo texto\"\n• element.classList.add('ativo')\n• element.style.display = \"none\""
+      }
+    ],
+    "exercicio": "Crie um botão 'Modo Noturno' que adiciona/remove uma classe .dark no body, mudando cores via CSS.",
+    "resumo": ["querySelector é o mais usado", "preventDefault() bloqueia ações padrão", "classList é melhor que style inline"]
+  },
+  {
+    "id": 8,
+    "titulo": "Python: Lógica e Sintaxe",
+    "subtitulo": "A linguagem da IA e automação",
+    "icone": "fa-python",
+    "secoes": [
+      {
+        "titulo": "Por que Python?",
+        "conteudo": "Sintaxe limpa, legível e poderosa. Dominante em Data Science, IA, Backend e automação."
+      },
+      {
+        "titulo": "Básico",
+        "codigo": "nome = input(\"Seu nome: \")\nidade = int(input(\"Idade: \"))\n\nif idade >= 18:\n    print(f\"Bem-vindo, {nome}!\")\nelse:\n    print(\"Menor de idade.\")"
+      },
+      {
+        "titulo": "Listas e Dicionários",
+        "conteudo": "• lista = [1, 2, 3] → lista.append(4)\n• dicionario = {\"chave\": \"valor\"} → dicionario[\"nova\"] = 10\n• for item in lista: print(item)"
+      }
+    ],
+    "exercicio": "Instale Python. Crie um script que leia 3 notas, calcule a média e diga se o aluno passou (>=7).",
+    "resumo": ["Python usa indentação, não {}", "input() sempre retorna string", "print() mostra no terminal"]
+  },
+  {
+    "id": 9,
+    "titulo": "Inteligência Artificial & ML",
+    "subtitulo": "Conceitos, bibliotecas e aplicações reais",
+    "icone": "fa-brain",
+    "secoes": [
+      {
+        "titulo": "O que é IA?",
+        "conteudo": "Sistemas que aprendem padrões em dados. Não seguem regras fixas, mas inferem a partir de exemplos."
+      },
+      {
+        "titulo": "Bibliotecas Essenciais",
+        "conteudo": "• NumPy: matemática rápida\n• Pandas: análise de dados\n• Scikit-learn: ML tradicional\n• TensorFlow/PyTorch: Deep Learning"
+      },
+      {
+        "titulo": "Fluxo de um Projeto ML",
+        "conteudo": "1. Coletar dados → 2. Limpar/Pré-processar → 3. Escolher modelo → 4. Treinar → 5. Avaliar → 6. Deploy"
+      }
+    ],
+    "exercicio": "Use o Google Colab. Importe Pandas, carregue um CSV simples e mostre as 5 primeiras linhas com df.head().",
+    "resumo": ["IA = aprendizado por dados", "Modelos precisam de treino e teste", "Comece com Scikit-learn antes de Deep Learning"]
+  },
+  {
+    "id": 10,
+    "titulo": "Projeto Final: Fullstack",
+    "subtitulo": "Una tudo em uma aplicação real",
+    "icone": "fa-award",
+    "secoes": [
+      {
+        "titulo": "O que vamos construir?",
+        "conteudo": "Um Dashboard de Controle com: Frontend (HTML/CSS/JS), Backend (Node/Python), Banco de dados e Visualização de IA."
+      },
+      {
+        "titulo": "Passos",
+        "conteudo": "1. Estrutura HTML semântica\n2. Estilização com CSS Grid/Flex\n3. Interatividade com JS DOM\n4. API simples com Express\n5. Integração com dados reais\n6. Deploy na nuvem"
+      }
+    ],
+    "exercicio": "Fork o repositório base. Implemente a tela de login, o dashboard de métricas e conecte à API de aulas.",
+    "resumo": ["Projetos reais unem todas as tecnologias", "Git/GitHub é obrigatório", "Deploy contínuo é parte do processo"]
+  }
+]
