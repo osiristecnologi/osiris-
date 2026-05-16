@@ -1,349 +1,521 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🐯 Tigrinho — Slot Game</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Solana web3.js via CDN -->
-  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIRIS - Domine a Programação e IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <div class="particles" id="particles"></div>
 
-<!-- ========== PARTÍCULAS DE FUNDO ========== -->
-<div class="particles" id="particles"></div>
-
-<!-- ========== HEADER ========== -->
-<header class="header">
-  <div class="logo">
-    <span class="logo-icon">🐯</span>
-    <span class="logo-text">TIGRINHO</span>
-  </div>
-  <div class="balance-bar">
-    <div class="balance-display">
-      <span class="balance-label">MOEDAS</span>
-      <span class="balance-amount" id="coinBalance">—</span>
-      <span class="coin-icon">🪙</span>
-    </div>
-    <button class="btn-buy-header" id="btnOpenShop">+ COMPRAR</button>
-    <button class="btn-daily" id="btnDailyBonus" title="Bônus Diário">🎁</button>
-    <!-- Phantom Wallet connect button — atualizado pelo solana-pay.js -->
-    <div data-sol-wallet id="solWalletBtn" style="display:flex;align-items:center"></div>
-  </div>
-</header>
-
-<!-- ========== MAIN CONTENT ========== -->
-<main class="main">
-
-  <!-- ===== SLOT MACHINE ===== -->
-  <section class="slot-section">
-
-    <!-- Jackpot Display -->
-    <div class="jackpot-display">
-      <span class="jackpot-label">JACKPOT</span>
-      <span class="jackpot-amount">50.000 🪙</span>
-    </div>
-
-    <!-- Slot Machine Frame -->
-    <div class="slot-machine" id="slotMachine">
-      <div class="slot-glow"></div>
-      
-      <!-- Grade 3x3 -->
-      <div class="slot-grid" id="slotGrid">
-        <!-- Coluna 1 -->
-        <div class="slot-column" id="col0">
-          <div class="slot-cell" id="cell-0-0"><span>🍒</span></div>
-          <div class="slot-cell active" id="cell-1-0"><span>🐯</span></div>
-          <div class="slot-cell" id="cell-2-0"><span>🍋</span></div>
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <span class="logo-text">OSIRIS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Início</a></li>
+                <li><a href="#trilha" class="nav-link">Trilha</a></li>
+                <li><a href="#tecnologias" class="nav-link">Tecnologias</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#comunidade" class="nav-link">Comunidade</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-login">Entrar</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <!-- Coluna 2 -->
-        <div class="slot-column" id="col1">
-          <div class="slot-cell" id="cell-0-1"><span>🔔</span></div>
-          <div class="slot-cell active" id="cell-1-1"><span>🐯</span></div>
-          <div class="slot-cell" id="cell-2-1"><span>⭐</span></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>DO BÁSICO AO AVANÇADO</span>
+                </div>
+                <h1 class="hero-title">
+                    DOMINE A PROGRAMAÇÃO<br>
+                    <span class="gradient-text">E A INTELIGÊNCIA ARTIFICIAL</span>
+                </h1>
+                <p class="hero-description">
+                    Uma jornada completa em 10 partes para transformar você de iniciante a especialista em programação e IA.
+                </p>
+                
+                <div class="tech-tags">
+                    <div class="tech-tag html">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="tech-tag css">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="tech-tag js">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-tag python">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-tag ai">
+                        <i class="fas fa-brain"></i>
+                        <span>Inteligência Artificial</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-glow">
+                        <span>COMEÇAR AGORA</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary">
+                        <span>VER TRILHA</span>
+                        <i class="fas fa-book-open"></i>
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>10K+</strong>
+                            <span>Alunos</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-project-diagram"></i>
+                        <div>
+                            <strong>50+</strong>
+                            <span>Projetos</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Certificado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="osiris-figure">
+                    <div class="figure-glow"></div>
+                    <div class="figure-container">
+                        <div class="egyptian-crown">
+                            <div class="crown-center"></div>
+                            <div class="crown-left"></div>
+                            <div class="crown-right"></div>
+                        </div>
+                        <div class="egyptian-face">
+                            <div class="face-glow"></div>
+                            <div class="eye left-eye">
+                                <div class="eye-glow"></div>
+                            </div>
+                            <div class="eye right-eye">
+                                <div class="eye-glow"></div>
+                            </div>
+                            <div class="mouth"></div>
+                        </div>
+                        <div class="energy-orb">
+                            <div class="orb-core"></div>
+                            <div class="orb-ring ring-1"></div>
+                            <div class="orb-ring ring-2"></div>
+                            <div class="orb-ring ring-3"></div>
+                            <div class="eye-symbol">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="hands">
+                            <div class="hand left"></div>
+                            <div class="hand right"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-cards">
+                    <div class="float-card html-card">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="float-card js-card">
+                        <i class="fab fa-js"></i>
+                        <span>JS</span>
+                    </div>
+                    <div class="float-card python-card">
+                        <i class="fab fa-python"></i>
+                        <span>PYTHON</span>
+                    </div>
+                    <div class="float-card ai-card">
+                        <i class="fas fa-brain"></i>
+                        <span>IA</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Coluna 3 -->
-        <div class="slot-column" id="col2">
-          <div class="slot-cell" id="cell-0-2"><span>🍇</span></div>
-          <div class="slot-cell active" id="cell-1-2"><span>🐯</span></div>
-          <div class="slot-cell" id="cell-2-2"><span>💎</span></div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>ROLE PARA EXPLORAR</span>
         </div>
-      </div>
+    </section>
 
-      <!-- Win Line Overlay -->
-      <div class="win-overlay" id="winOverlay"></div>
-    </div>
-
-    <!-- Resultado -->
-    <div class="result-display" id="resultDisplay">
-      <span id="resultText">GIRE PARA GANHAR!</span>
-    </div>
-
-    <!-- Controles -->
-    <div class="controls">
-      <div class="spin-cost-info">
-        <span class="cost-label">CUSTO POR GIRO:</span>
-        <span class="cost-value" id="spinCost">50 🪙</span>
-      </div>
-      <button class="btn-spin" id="btnSpin">
-        <span class="spin-text">GIRAR</span>
-        <span class="spin-icon">🎰</span>
-      </button>
-      <div class="auto-play">
-        <label class="toggle-label">
-          <input type="checkbox" id="autoPlay" />
-          <span class="toggle-slider"></span>
-          AUTO
-        </label>
-      </div>
-    </div>
-
-    <!-- Estatísticas rápidas -->
-    <div class="quick-stats">
-      <div class="stat-item">
-        <span class="stat-val" id="statSpins">0</span>
-        <span class="stat-label">GIROS</span>
-      </div>
-      <div class="stat-divider">|</div>
-      <div class="stat-item">
-        <span class="stat-val" id="statWins">0</span>
-        <span class="stat-label">VITÓRIAS</span>
-      </div>
-      <div class="stat-divider">|</div>
-      <div class="stat-item">
-        <span class="stat-val" id="statWinRate">0%</span>
-        <span class="stat-label">TAXA WIN</span>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ===== TABELA DE PAGAMENTOS ===== -->
-  <section class="paytable-section">
-    <h3 class="section-title">TABELA DE PRÊMIOS</h3>
-    <div class="paytable">
-      <div class="pay-row jackpot-row">
-        <span class="pay-symbols">🐯🐯🐯</span>
-        <span class="pay-mult">× 50</span>
-        <span class="pay-tag">JACKPOT</span>
-      </div>
-      <div class="pay-row">
-        <span class="pay-symbols">💎💎💎</span>
-        <span class="pay-mult">× 20</span>
-      </div>
-      <div class="pay-row">
-        <span class="pay-symbols">7️⃣7️⃣7️⃣</span>
-        <span class="pay-mult">× 10</span>
-      </div>
-      <div class="pay-row">
-        <span class="pay-symbols">🔔🔔🔔</span>
-        <span class="pay-mult">× 5</span>
-      </div>
-      <div class="pay-row">
-        <span class="pay-symbols">🍒🍒🍒</span>
-        <span class="pay-mult">× 3</span>
-      </div>
-      <div class="pay-row">
-        <span class="pay-symbols">⭐⭐⭐</span>
-        <span class="pay-mult">× 2</span>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ========== MODAL: LOJA DE MOEDAS ========== -->
-<div class="modal-overlay" id="shopModal">
-  <div class="modal shop-modal">
-    <button class="modal-close" id="closeShop">✕</button>
-    <div class="modal-header">
-      <span class="modal-icon">🪙</span>
-      <h2>COMPRAR MOEDAS</h2>
-      <p>Escolha seu pacote e pague via PIX</p>
-    </div>
-    
-    <div class="packages-grid" id="packagesGrid">
-      <!-- Carregado via JS -->
-    </div>
-
-    <div class="shop-footer">
-      <p>🔒 Pagamento 100% seguro via Mercado Pago</p>
-      <p>⚡ Moedas adicionadas automaticamente após confirmação</p>
-      <p class="disclaimer">⚠️ Moedas são virtuais e não podem ser convertidas em dinheiro real</p>
-    </div>
-  </div>
-</div>
-
-<!-- ========== MODAL: QR CODE PIX ========== -->
-<div class="modal-overlay" id="pixModal">
-  <div class="modal pix-modal">
-    <button class="modal-close" id="closePix">✕</button>
-    <div class="modal-header">
-      <span class="modal-icon">💸</span>
-      <h2>PAGAMENTO PIX</h2>
-      <p id="pixPackageInfo">Carregando...</p>
-    </div>
-    
-    <div class="pix-content">
-      <!-- QR Code -->
-      <div class="qr-container" id="qrContainer">
-        <div class="qr-loading" id="qrLoading">
-          <div class="spinner"></div>
-          <span>Gerando QR Code...</span>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Aprendizado Progressivo</h3>
+                    <p>Do básico ao avançado em uma jornada estruturada e cuidadosamente planejada.</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Prática Real</h3>
+                    <p>Exercícios, projetos e desafios do mundo real para consolidar seu conhecimento.</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>IA Integrada</h3>
+                    <p>Aprenda a criar soluções inteligentes com IA desde o início da sua jornada.</p>
+                </div>
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Certificado</h3>
+                    <p>Conquiste seu certificado e impulsione sua carreira no mercado de tecnologia.</p>
+                </div>
+            </div>
         </div>
-        <img id="qrCodeImg" class="qr-img hidden" alt="QR Code PIX" />
-        <div class="qr-demo hidden" id="qrDemo">
-          <div class="qr-demo-box">📱</div>
-          <p>Modo Demo<br/>Configure o Mercado Pago no .env</p>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section id="trilha" class="learning-path">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-subtitle">TRILHA DE APRENDIZADO</span>
+                    <span class="title-main">10 PARTES</span>
+                </h2>
+                <p class="section-description">
+                    Uma jornada completa do zero ao especialista em programação e inteligência artificial
+                </p>
+            </div>
+
+            <div class="path-timeline">
+                <div class="path-node active" data-part="1">
+                    <div class="node-number">1</div>
+                    <div class="node-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Início</h3>
+                        <p>Comece sua jornada aqui</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="2">
+                    <div class="node-number">2</div>
+                    <div class="node-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>HTML</h3>
+                        <p>Estrutura da Web</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="3">
+                    <div class="node-number">3</div>
+                    <div class="node-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>JavaScript</h3>
+                        <p>Interatividade e Lógica</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="4">
+                    <div class="node-number">4</div>
+                    <div class="node-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Python</h3>
+                        <p>Lógica de Programação</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="5">
+                    <div class="node-number">5</div>
+                    <div class="node-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Estruturas de Dados</h3>
+                        <p>Organize e otimize informações</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="6">
+                    <div class="node-number">6</div>
+                    <div class="node-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Algoritmos</h3>
+                        <p>Resolução de problemas</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="7">
+                    <div class="node-number">7</div>
+                    <div class="node-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Front-end e Back-end</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="8">
+                    <div class="node-number">8</div>
+                    <div class="node-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Inteligência Artificial</h3>
+                        <p>Conceitos e Fundamentos</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="9">
+                    <div class="node-number">9</div>
+                    <div class="node-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Machine Learning</h3>
+                        <p>Modelos e Treinamentos</p>
+                    </div>
+                    <div class="node-connector"></div>
+                </div>
+
+                <div class="path-node" data-part="10">
+                    <div class="node-number">10</div>
+                    <div class="node-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="node-content">
+                        <h3>Projetos Avançados</h3>
+                        <p>Aplicações reais e escaláveis</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Código Pix para copiar -->
-      <div class="pix-code-section">
-        <label>Código PIX (Copia e Cola)</label>
-        <div class="pix-code-box">
-          <input type="text" id="pixCodeInput" readonly placeholder="Aguardando código..." />
-          <button class="btn-copy" id="btnCopyPix">📋 COPIAR</button>
+    <!-- Technologies Section -->
+    <section id="tecnologias" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-subtitle">TECNOLOGIAS</span>
+                    <span class="title-main">QUE VOCÊ VAI DOMINAR</span>
+                </h2>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card glass-effect">
+                    <div class="tech-icon html">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica e moderna para web</p>
+                    <ul class="tech-skills">
+                        <li><i class="fas fa-check"></i> Tags Semânticas</li>
+                        <li><i class="fas fa-check"></i> Acessibilidade</li>
+                        <li><i class="fas fa-check"></i> SEO</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card glass-effect">
+                    <div class="tech-icon css">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Estilização avançada e responsiva</p>
+                    <ul class="tech-skills">
+                        <li><i class="fas fa-check"></i> Flexbox & Grid</li>
+                        <li><i class="fas fa-check"></i> Animações</li>
+                        <li><i class="fas fa-check"></i> Design Responsivo</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card glass-effect">
+                    <div class="tech-icon js">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Programação dinâmica e interativa</p>
+                    <ul class="tech-skills">
+                        <li><i class="fas fa-check"></i> ES6+</li>
+                        <li><i class="fas fa-check"></i> Async/Await</li>
+                        <li><i class="fas fa-check"></i> DOM Manipulation</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card glass-effect">
+                    <div class="tech-icon python">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Linguagem versátil para IA e dados</p>
+                    <ul class="tech-skills">
+                        <li><i class="fas fa-check"></i> Sintaxe Simples</li>
+                        <li><i class="fas fa-check"></i> Bibliotecas Poderosas</li>
+                        <li><i class="fas fa-check"></i> Data Science</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card glass-effect featured">
+                    <div class="tech-badge">DESTAQUE</div>
+                    <div class="tech-icon ai">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Machine Learning e Deep Learning</p>
+                    <ul class="tech-skills">
+                        <li><i class="fas fa-check"></i> Redes Neurais</li>
+                        <li><i class="fas fa-check"></i> NLP</li>
+                        <li><i class="fas fa-check"></i> Computer Vision</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Status -->
-      <div class="pix-status" id="pixStatus">
-        <div class="status-icon">⏳</div>
-        <div class="status-text">
-          <strong id="statusTitle">Aguardando Pagamento</strong>
-          <span id="statusDesc">Escaneie o QR Code ou copie o código PIX</span>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content glass-effect">
+                <div class="cta-glow"></div>
+                <h2>PRONTO PARA COMEÇAR SUA JORNADA?</h2>
+                <p>Junte-se a milhares de alunos e transforme sua carreira na área de tecnologia</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary btn-large">
+                        <span>INICIAR AGORA</span>
+                        <i class="fas fa-rocket"></i>
+                    </button>
+                    <button class="btn-outline btn-large">
+                        <span>SAIBA MAIS</span>
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<!-- ========== MODAL: BÔNUS DIÁRIO ========== -->
-<div class="modal-overlay" id="bonusModal">
-  <div class="modal bonus-modal">
-    <div class="bonus-content">
-      <div class="bonus-animation" id="bonusAnimation">🎁</div>
-      <h2 id="bonusTitle">BÔNUS DIÁRIO!</h2>
-      <p id="bonusDesc">+100 moedas grátis!</p>
-      <div class="bonus-coins" id="bonusCoins">+100 🪙</div>
-      <button class="btn-claim" id="btnClaimBonus">COLETAR!</button>
-    </div>
-  </div>
-</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="logo-text">OSIRIS</span>
+                    </div>
+                    <p>Transformando vidas através da educação em programação e inteligência artificial.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Plataforma</h4>
+                        <ul>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Trilha</a></li>
+                            <li><a href="#">Projetos</a></li>
+                            <li><a href="#">Certificados</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Comunidade</h4>
+                        <ul>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Fórum</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Privacidade</a></li>
+                            <li><a href="#">Termos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OSIRIS. Todos os direitos reservados.</p>
+                <p class="footer-tagline">DESPERTE SEU POTENCIAL. CONSTRUA O FUTURO.</p>
+            </div>
+        </div>
+    </footer>
 
-<!-- ========== TOAST NOTIFICATIONS ========== -->
-<div class="toast-container" id="toastContainer"></div>
-
-<!-- ========== WIN CELEBRATION ========== -->
-<div class="celebration" id="celebration"></div>
-
-<!-- ========== SEÇÃO SOLANA — Comprar com SOL ========== -->
-<section style="
-  max-width:860px;margin:0 auto 40px;padding:0 20px;
-  font-family:'Rajdhani',sans-serif;
-">
-  <div style="
-    background:linear-gradient(135deg,rgba(153,69,255,.08),rgba(20,241,149,.06));
-    border:1px solid rgba(153,69,255,.25);border-radius:20px;
-    padding:28px 32px;display:flex;align-items:center;
-    justify-content:space-between;gap:20px;flex-wrap:wrap;
-  ">
-    <div>
-      <div style="font-size:22px;font-weight:800;color:#d0b4ff;margin-bottom:4px;
-                  display:flex;align-items:center;gap:10px">
-        <span style="font-size:28px">◎</span>
-        Pague com Solana
-      </div>
-      <p style="margin:0;color:#888;font-size:14px;max-width:340px;line-height:1.5">
-        Conecte sua <strong style="color:#9945FF">Phantom Wallet</strong> e compre moedas
-        diretamente via blockchain — sem intermediários, instantâneo.
-      </p>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px">
-      <!-- Botão de conexão — gerenciado pelo solana-pay.js -->
-      <div data-sol-wallet></div>
-      <button onclick="SolanaPay.openShop()" style="
-        background:linear-gradient(135deg,#FF8C00,#FFD700);
-        color:#000;border:none;border-radius:10px;
-        padding:10px 22px;font-family:Orbitron,sans-serif;
-        font-weight:700;font-size:13px;cursor:pointer;
-        transition:all .2s;letter-spacing:.5px;
-      " onmouseover="this.style.filter='brightness(1.1)'"
-         onmouseout="this.style.filter='none'">
-        🪙 Comprar Moedas com SOL
-      </button>
-    </div>
-  </div>
-
-  <!-- Pacotes em destaque -->
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px">
-    <div onclick="SolanaPay.openShop()" style="
-      background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
-      border-top:3px solid #c0c0c0;border-radius:14px;padding:16px;
-      cursor:pointer;transition:all .2s;text-align:center;
-    " onmouseover="this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.transform='none'">
-      <div style="font-size:20px;font-weight:900;color:#c0c0c0;font-family:Orbitron">$5</div>
-      <div style="font-size:15px;font-weight:700;margin:4px 0">🪙 500 moedas</div>
-      <div style="color:#666;font-size:12px">0.058 SOL</div>
-    </div>
-    <div onclick="SolanaPay.openShop()" style="
-      background:rgba(255,215,0,.05);border:1px solid rgba(255,215,0,.2);
-      border-top:3px solid #FFD700;border-radius:14px;padding:16px;
-      cursor:pointer;transition:all .2s;text-align:center;position:relative;
-    " onmouseover="this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.transform='none'">
-      <div style="position:absolute;top:8px;right:8px;background:#FFD700;color:#000;
-                  font-size:9px;font-weight:800;padding:2px 6px;border-radius:4px">POPULAR</div>
-      <div style="font-size:20px;font-weight:900;color:#FFD700;font-family:Orbitron">$10</div>
-      <div style="font-size:15px;font-weight:700;margin:4px 0">🪙 1.200 moedas</div>
-      <div style="color:#666;font-size:12px">0.117 SOL</div>
-    </div>
-    <div onclick="SolanaPay.openShop()" style="
-      background:rgba(255,107,0,.05);border:1px solid rgba(255,107,0,.2);
-      border-top:3px solid #FF6B00;border-radius:14px;padding:16px;
-      cursor:pointer;transition:all .2s;text-align:center;position:relative;
-    " onmouseover="this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.transform='none'">
-      <div style="position:absolute;top:8px;right:8px;background:#FF6B00;color:#fff;
-                  font-size:9px;font-weight:800;padding:2px 6px;border-radius:4px">MELHOR</div>
-      <div style="font-size:20px;font-weight:900;color:#FF6B00;font-family:Orbitron">$30</div>
-      <div style="font-size:15px;font-weight:700;margin:4px 0">🪙 4.000 moedas</div>
-      <div style="color:#666;font-size:12px">0.351 SOL</div>
-    </div>
-  </div>
-</section>
-
-<script src="js/app.js"></script>
-<script src="js/solana-pay.js"></script>
-
-<script>
-  // ── Integração SolanaPay ↔ Jogo ─────────────────────────────────────────
-  // Expõe o userId da sessão do backend para o módulo Solana
-  // (O backend usa express-session; obtemos via /api/game/user ao carregar)
-  (async function initSolanaIntegration() {
-    try {
-      const res  = await fetch('/api/game/user', { credentials: 'include' });
-      const data = await res.json();
-      if (data.success) {
-        window.GAME_USER_ID = data.user.id;
-        console.log('[Solana] userId da sessão:', window.GAME_USER_ID);
-      }
-    } catch (e) {
-      console.warn('[Solana] Não foi possível obter userId da sessão:', e.message);
-    }
-  })();
-
-  // Atualiza saldo após compra bem-sucedida
-  window.addEventListener('solanaPay:balanceUpdated', (e) => {
-    const el = document.getElementById('coinBalance');
-    if (el) el.textContent = (e.detail.balance ?? 0).toLocaleString('pt-BR');
-  });
-
-  // Log de pagamentos no console (debug)
-  window.addEventListener('solanaPay:paymentSuccess', (e) => {
-    console.log('[Solana] Pagamento confirmado:', e.detail);
-  });
-  </script>
+    <script src="script.js"></script>
+</body>
+</html>
